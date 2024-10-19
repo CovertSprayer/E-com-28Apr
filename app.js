@@ -11,8 +11,8 @@ const passport = require("passport");
 const Strategy = require("passport-local");
 const UserModel = require("./models/User.model");
 const MongoStore = require("connect-mongo");
-const PORT = 5000;
-const { DB_URL: mongoURL, SESSION_SECRET } = process.env;
+const { DB_URL: mongoURL, SESSION_SECRET, PORT:port } = process.env;
+const PORT = port || 5000;
 
 const NODE_ENV = "production";
 
